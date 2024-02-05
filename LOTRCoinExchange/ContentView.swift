@@ -64,6 +64,9 @@ struct ContentView: View {
                         // Textfield
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
+                            .onChange(of: leftAmount) {
+                                rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
+                            }
                     }
                     // Equal sign
                     Image(systemName: "equal")
@@ -96,6 +99,9 @@ struct ContentView: View {
                         TextField("Amount", text: $rightAmount)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)
+                            .onChange(of: rightAmount) {
+                                leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+                            }
                     }
                 }
                 .padding(30)
