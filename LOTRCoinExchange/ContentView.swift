@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ContentView: View {
     @State var showExchangeInfo = false
@@ -13,6 +14,9 @@ struct ContentView: View {
     
     @State var leftAmount = ""
     @State var rightAmount = ""
+    
+    @FocusState var leftTyping
+    @FocusState var rightTyping
     
     @State var leftCurrency = Currency.silverPenny
     @State var rightCurrency = Currency.goldPiece
@@ -37,7 +41,6 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                 
                 // Currency Conversion Section
-                
                 HStack {
                     // Left Conv Section
                     
@@ -60,13 +63,14 @@ struct ContentView: View {
                         .onTapGesture {
                             showSelectedCurrency.toggle()
                         }
+                        .popoverTip(CurrencyTip(),
+                                    arrowEdge: .bottom)
                         
                         // Textfield
                         TextField("Amount", text: $leftAmount)
                             .textFieldStyle(.roundedBorder)
-                            .onChange(of: leftAmount) {
-                                rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
-                            }
+                            .focused($leftTyping)
+                            .keyboardType(.decimalPad)
                     }
                     // Equal sign
                     Image(systemName: "equal")
@@ -99,9 +103,8 @@ struct ContentView: View {
                         TextField("Amount", text: $rightAmount)
                             .textFieldStyle(.roundedBorder)
                             .multilineTextAlignment(.trailing)
-                            .onChange(of: rightAmount) {
-                                leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
-                            }
+                            .focused($rightTyping)
+                            .keyboardType(.decimalPad)
                     }
                 }
                 .padding(30)
@@ -123,17 +126,42 @@ struct ContentView: View {
                         
                     }
                     .padding(.trailing)
-                    .sheet(isPresented: $showExchangeInfo) {
-                        ExchangeInfo()
-                    }
-                    .sheet(isPresented: $showSelectedCurrency, content: {
-                        SelectCurrency(topCurrency: $leftCurrency,
-                        bottomCurrency: $rightCurrency)
-                    })
                 }
             }
 //            .border(.red)
         }
+        .task {
+            try? Tips.configure()
+        }
+        
+        .onChange(of: leftAmount) {
+            if leftTyping {
+                rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
+            }
+        }
+        
+        .onChange(of: rightAmount) {
+            if rightTyping {
+                leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+            }
+        }
+        
+        .onChange(of: leftCurrency) {
+            leftAmount = rightCurrency.convert(rightAmount, to: leftCurrency)
+        }
+        
+        .onChange(of: rightCurrency) {
+            rightAmount = leftCurrency.convert(leftAmount, to: rightCurrency)
+        }
+        
+        .sheet(isPresented: $showExchangeInfo) {
+            ExchangeInfo()
+        }
+        
+        .sheet(isPresented: $showSelectedCurrency, content: {
+            SelectCurrency(topCurrency: $leftCurrency,
+            bottomCurrency: $rightCurrency)
+        })
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AC863322B70E89300CDBBB0 /* IconGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC863312B70E89300CDBBB0 /* IconGrid.swift */; };
+		0AC863342B712A3700CDBBB0 /* CurrencyTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC863332B712A3700CDBBB0 /* CurrencyTip.swift */; };
 		0AFC96372B6B806D00F6A26A /* LOTRCoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */; };
 		0AFC96392B6B806D00F6A26A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96382B6B806D00F6A26A /* ContentView.swift */; };
 		0AFC963B2B6B806F00F6A26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFC963A2B6B806F00F6A26A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		0AC863312B70E89300CDBBB0 /* IconGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGrid.swift; sourceTree = "<group>"; };
+		0AC863332B712A3700CDBBB0 /* CurrencyTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTip.swift; sourceTree = "<group>"; };
 		0AFC96332B6B806D00F6A26A /* LOTRCoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTRCoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRCoinExchangeApp.swift; sourceTree = "<group>"; };
 		0AFC96382B6B806D00F6A26A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */,
 				0AFC964D2B6BD74200F6A26A /* Currency.swift */,
 				0AFC96382B6B806D00F6A26A /* ContentView.swift */,
+				0AC863332B712A3700CDBBB0 /* CurrencyTip.swift */,
 				0AFC96492B6BC2F700F6A26A /* SelectCurrency.swift */,
 				0AC863312B70E89300CDBBB0 /* IconGrid.swift */,
 				0AFC964B2B6BC74300F6A26A /* CurrencyIcon.swift */,
@@ -162,6 +165,7 @@
 				0AFC964A2B6BC2F700F6A26A /* SelectCurrency.swift in Sources */,
 				0AFC96462B6B935A00F6A26A /* ExchangeInfo.swift in Sources */,
 				0AFC96392B6B806D00F6A26A /* ContentView.swift in Sources */,
+				0AC863342B712A3700CDBBB0 /* CurrencyTip.swift in Sources */,
 				0AFC96372B6B806D00F6A26A /* LOTRCoinExchangeApp.swift in Sources */,
 				0AFC964E2B6BD74200F6A26A /* Currency.swift in Sources */,
 				0AFC964C2B6BC74300F6A26A /* CurrencyIcon.swift in Sources */,
