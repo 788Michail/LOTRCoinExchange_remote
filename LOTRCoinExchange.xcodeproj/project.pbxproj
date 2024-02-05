@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC863322B70E89300CDBBB0 /* IconGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC863312B70E89300CDBBB0 /* IconGrid.swift */; };
 		0AFC96372B6B806D00F6A26A /* LOTRCoinExchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */; };
 		0AFC96392B6B806D00F6A26A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96382B6B806D00F6A26A /* ContentView.swift */; };
 		0AFC963B2B6B806F00F6A26A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFC963A2B6B806F00F6A26A /* Assets.xcassets */; };
 		0AFC963F2B6B806F00F6A26A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AFC963E2B6B806F00F6A26A /* Preview Assets.xcassets */; };
+		0AFC96462B6B935A00F6A26A /* ExchangeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96452B6B935A00F6A26A /* ExchangeInfo.swift */; };
+		0AFC96482B6BA00B00F6A26A /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96472B6BA00B00F6A26A /* ExchangeRate.swift */; };
+		0AFC964A2B6BC2F700F6A26A /* SelectCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC96492B6BC2F700F6A26A /* SelectCurrency.swift */; };
+		0AFC964C2B6BC74300F6A26A /* CurrencyIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC964B2B6BC74300F6A26A /* CurrencyIcon.swift */; };
+		0AFC964E2B6BD74200F6A26A /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC964D2B6BD74200F6A26A /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AC863312B70E89300CDBBB0 /* IconGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconGrid.swift; sourceTree = "<group>"; };
 		0AFC96332B6B806D00F6A26A /* LOTRCoinExchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOTRCoinExchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOTRCoinExchangeApp.swift; sourceTree = "<group>"; };
 		0AFC96382B6B806D00F6A26A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AFC963A2B6B806F00F6A26A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AFC963C2B6B806F00F6A26A /* LOTRCoinExchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOTRCoinExchange.entitlements; sourceTree = "<group>"; };
 		0AFC963E2B6B806F00F6A26A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AFC96452B6B935A00F6A26A /* ExchangeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeInfo.swift; sourceTree = "<group>"; };
+		0AFC96472B6BA00B00F6A26A /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		0AFC96492B6BC2F700F6A26A /* SelectCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrency.swift; sourceTree = "<group>"; };
+		0AFC964B2B6BC74300F6A26A /* CurrencyIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyIcon.swift; sourceTree = "<group>"; };
+		0AFC964D2B6BD74200F6A26A /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				0AFC96362B6B806D00F6A26A /* LOTRCoinExchangeApp.swift */,
+				0AFC964D2B6BD74200F6A26A /* Currency.swift */,
 				0AFC96382B6B806D00F6A26A /* ContentView.swift */,
+				0AFC96492B6BC2F700F6A26A /* SelectCurrency.swift */,
+				0AC863312B70E89300CDBBB0 /* IconGrid.swift */,
+				0AFC964B2B6BC74300F6A26A /* CurrencyIcon.swift */,
+				0AFC96452B6B935A00F6A26A /* ExchangeInfo.swift */,
+				0AFC96472B6BA00B00F6A26A /* ExchangeRate.swift */,
 				0AFC963A2B6B806F00F6A26A /* Assets.xcassets */,
 				0AFC963C2B6B806F00F6A26A /* LOTRCoinExchange.entitlements */,
 				0AFC963D2B6B806F00F6A26A /* Preview Content */,
@@ -139,8 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC863322B70E89300CDBBB0 /* IconGrid.swift in Sources */,
+				0AFC96482B6BA00B00F6A26A /* ExchangeRate.swift in Sources */,
+				0AFC964A2B6BC2F700F6A26A /* SelectCurrency.swift in Sources */,
+				0AFC96462B6B935A00F6A26A /* ExchangeInfo.swift in Sources */,
 				0AFC96392B6B806D00F6A26A /* ContentView.swift in Sources */,
 				0AFC96372B6B806D00F6A26A /* LOTRCoinExchangeApp.swift in Sources */,
+				0AFC964E2B6BD74200F6A26A /* Currency.swift in Sources */,
+				0AFC964C2B6BC74300F6A26A /* CurrencyIcon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
