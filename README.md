@@ -15,7 +15,7 @@ Screenshots
 Installation
 Clone the repository:
 bash
-git clone https://github.com/788Michail/middle-earth-coin-converter.git
+git clone https://github.com/788Michail/LOTRCoinExchange_remote.git
 Open the project in Xcode.
 Build and run the project on your iOS device or simulator.
 Usage
